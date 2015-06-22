@@ -526,7 +526,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 
     if ([[self class] respondsToSelector:@selector(ignoreAttributes)]) {
         NSArray* ignoreAttributes = [[self class] performSelector:@selector(ignoreAttributes)];
-        dictionaryValue = [dictionaryValue mtl_dictionaryByRemovingEntriesWithKeys:[NSSet setWithArray:ignoreAttributes]];
+        dictionaryValue = [dictionaryValue awsmtl_dictionaryByRemovingEntriesWithKeys:[NSSet setWithArray:ignoreAttributes]];
     }
     
     for (id key in dictionaryValue) {
@@ -559,7 +559,8 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 
     if ([[self class] respondsToSelector:@selector(ignoreAttributes)]) {
         NSArray* ignoreAttributes = [[self class] performSelector:@selector(ignoreAttributes)];
-        dictionaryValue = [dictionaryValue mtl_dictionaryByRemovingEntriesWithKeys:[NSSet setWithArray:ignoreAttributes]];
+        dictionaryValue = [dictionaryValue awsmtl_dictionaryByRemovingEntriesWithKeys:[NSSet setWithArray:ignoreAttributes]];
+        
     }
     
     for (id key in dictionaryValue) {
@@ -617,7 +618,7 @@ static AWSSynchronizedMutableDictionary *_serviceClients = nil;
 
      if ([[self class] respondsToSelector:@selector(ignoreAttributes)]) {
         NSArray* ignoreAttributes = [[self class] performSelector:@selector(ignoreAttributes)];
-        dictionaryValue = [dictionaryValue mtl_dictionaryByRemovingEntriesWithKeys:[NSSet setWithArray:ignoreAttributes]];
+        dictionaryValue = [dictionaryValue awsmtl_dictionaryByRemovingEntriesWithKeys:[NSSet setWithArray:ignoreAttributes]];
     }
     
     for (id key in keyArray) {
